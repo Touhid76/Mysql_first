@@ -1,7 +1,6 @@
 CREATE DATABASE IF NOT EXISTS sms;
 USE sms;
 
--- 1️⃣ Students table (keeping your name 'snts')
 CREATE TABLE IF NOT EXISTS snts (
     student_id INT NOT NULL,
     name VARCHAR(50),
@@ -21,7 +20,7 @@ INSERT INTO snts(student_id, name, roll, class, city) VALUES
 
 SELECT * FROM snts;
 
--- 2️⃣ Courses table
+
 CREATE TABLE IF NOT EXISTS courses (
     course_id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(50),
@@ -36,7 +35,7 @@ INSERT INTO courses(name, credit) VALUES
 
 SELECT * FROM courses;
 
--- 3️⃣ Enrollments table
+
 CREATE TABLE IF NOT EXISTS enrollments (
     enrollment_id INT NOT NULL AUTO_INCREMENT,
     student_id INT NOT NULL,
@@ -55,7 +54,7 @@ INSERT INTO enrollments (student_id, course_id) VALUES
 
 SELECT * FROM enrollments;
 
--- 4️⃣ Marks table
+
 CREATE TABLE IF NOT EXISTS marks (
     mark_id INT NOT NULL AUTO_INCREMENT,
     enrollment_id INT NOT NULL,
